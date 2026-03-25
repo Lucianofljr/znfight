@@ -1,10 +1,10 @@
 import './styles/global.css'
 import './styles/theme.css'
 
-import { NavBar } from './components/NavBar'
+import Layout from './Layout/Layout'
 
-export function App() {
+export default function App() {
     return (
-        <NavBar />
+        <Layout children={undefined} />
     )
 }
