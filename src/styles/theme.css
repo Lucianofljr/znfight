@@ -1,5 +1,16 @@
 :root {
-    --primary: #b6b6b6;
+    --primary: #0a0a0a;
     --navbar: #000000;
+    --footer: #080808;
+    --card-bg: #111111;
+    --card-hover: #181818;
     --text-navbar: #ebf744;
+    --accent: #ebf744;
+    --accent-dark: #c9d400;
+    --text-primary: #f0f0f0;
+    --text-secondary: #888888;
+    --text-muted: #444444;
+    --border: #222222;
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'Barlow', system-ui, sans-serif;
 }

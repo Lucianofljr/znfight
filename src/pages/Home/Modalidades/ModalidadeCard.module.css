@@ -1,0 +1,156 @@
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    position: relative;
+    background: var(--card-bg);
+    padding: 28px 28px 28px 32px;
+    cursor: pointer;
+    transition: fadeUp 0.5s ease both;
+    overflow: hidden;
+}
+
+.card:hover {
+    background: var(--card-hover);
+}
+
+.accentBar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .accentBar,
+.card.open .accentBar {
+    transform: scaleY(1);
+}
+
+.header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.icon {
+    font-size: 2.8rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.meta {
+    flex: 1;
+}
+
+.tag {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.name {
+    font-family: var(--font-display);
+    font-size: 3.2rem;
+    letter-spacing: 0.15rem;
+    color: var(--text-primary);
+    line-height: 1;
+    font-weight: 400;
+}
+
+.toggle {
+    font-size: 2.4rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+    margin-top: 6px;
+    font-family: var(--font-display);
+}
+
+.card.open .toggle {
+    color: var(--accent);
+}
+
+.desc {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s ease, opacity 0.3s ease, margin-top 0.3s ease;
+    opacity: 0;
+    margin-top: 0;
+}
+
+.card.open .details {
+    max-height: 240px;
+    opacity: 1;
+    margin-top: 20px;
+}
+
+.beneficios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.pill {
+    background: #1c1c1c;
+    border: 1px solid var(--border);
+    color: #ccc;
+    font-size: 1.1rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 0.1rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.infoLabel {
+    font-size: 1.1rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.infoValue {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    text-align: right;
+}

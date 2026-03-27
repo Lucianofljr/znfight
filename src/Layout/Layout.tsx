@@ -15,7 +15,7 @@ export default function Layout({  children  }: Props) {
             </main>
 
             <footer className="footer">
-                © 2026 ZN
+                © 2026 ZN — Todos os direitos reservados
             </footer>
 
         </div>
